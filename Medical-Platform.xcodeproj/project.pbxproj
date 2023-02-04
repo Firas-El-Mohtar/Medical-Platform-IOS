@@ -13,6 +13,9 @@
 		951741172974273500AD6ADB /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951741162974273500AD6ADB /* HomeScreen.swift */; };
 		9517411929743D8200AD6ADB /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517411829743D8200AD6ADB /* CustomTabBar.swift */; };
 		9517411B29743F3900AD6ADB /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517411A29743F3900AD6ADB /* TabViewModel.swift */; };
+		95331C3C298E69AF00E26764 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95331C3B298E69AF00E26764 /* Patient.swift */; };
+		95331C3E298E6A1000E26764 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95331C3D298E6A1000E26764 /* Doctor.swift */; };
+		95331C40298E6A8D00E26764 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95331C3F298E6A8D00E26764 /* Hospital.swift */; };
 		953F78B9297EC01100E428ED /* DoctorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F78B8297EC01100E428ED /* DoctorCardView.swift */; };
 		95605154297BF9090061D513 /* CustomCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95605153297BF9090061D513 /* CustomCarousel.swift */; };
 		956F7D67297598C400931ADF /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F7D66297598C400931ADF /* HomeTabView.swift */; };
@@ -42,6 +45,9 @@
 		951741162974273500AD6ADB /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		9517411829743D8200AD6ADB /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		9517411A29743F3900AD6ADB /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
+		95331C3B298E69AF00E26764 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		95331C3D298E6A1000E26764 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		95331C3F298E6A8D00E26764 /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
 		953F78B8297EC01100E428ED /* DoctorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCardView.swift; sourceTree = "<group>"; };
 		95605153297BF9090061D513 /* CustomCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCarousel.swift; sourceTree = "<group>"; };
 		956F7D66297598C400931ADF /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
@@ -84,6 +90,16 @@
 				95B7E3D229759D060050F1FB /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		95331C3A298E699700E26764 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95331C3B298E69AF00E26764 /* Patient.swift */,
+				95331C3D298E6A1000E26764 /* Doctor.swift */,
+				95331C3F298E6A8D00E26764 /* Hospital.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		955D1151296B233B008AFD23 /* Views */ = {
@@ -132,6 +148,7 @@
 		95978F2229586D8F0056FE3A /* Testing New Stuff */ = {
 			isa = PBXGroup;
 			children = (
+				95331C3A298E699700E26764 /* Model */,
 				951741152974271D00AD6ADB /* Home */,
 				959721932965C9C7007409E9 /* Utils */,
 				95CE32502958B6820067BD9C /* Authentication */,
@@ -271,6 +288,7 @@
 				95978F2629586D8F0056FE3A /* ContentView.swift in Sources */,
 				95ADF75E298565CC009566A3 /* SwiftUIView.swift in Sources */,
 				950C483C298146B700503C06 /* DoctorChip.swift in Sources */,
+				95331C3C298E69AF00E26764 /* Patient.swift in Sources */,
 				95CE32542959CD420067BD9C /* AuthenticationViewModel.swift in Sources */,
 				950C4840298154D900503C06 /* BarView.swift in Sources */,
 				95605154297BF9090061D513 /* CustomCarousel.swift in Sources */,
@@ -278,6 +296,7 @@
 				95E329B82969EBAD00EAB129 /* RegisterScreen.swift in Sources */,
 				95ADF7592985313B009566A3 /* BarGraphViewModel.swift in Sources */,
 				956F7D67297598C400931ADF /* HomeTabView.swift in Sources */,
+				95331C3E298E6A1000E26764 /* Doctor.swift in Sources */,
 				95978F2429586D8F0056FE3A /* Testing_New_StuffApp.swift in Sources */,
 				950C48452981682D00503C06 /* BarGraph.swift in Sources */,
 				95C1EE492986BDDE00DB0020 /* DragGestures.swift in Sources */,
@@ -288,6 +307,7 @@
 				9517411929743D8200AD6ADB /* CustomTabBar.swift in Sources */,
 				95B7E3D329759D060050F1FB /* HomeViewModel.swift in Sources */,
 				9517411B29743F3900AD6ADB /* TabViewModel.swift in Sources */,
+				95331C40298E6A8D00E26764 /* Hospital.swift in Sources */,
 				95E329BA2969EBB600EAB129 /* LoginScreen.swift in Sources */,
 				95E329B22968893100EAB129 /* Constants.swift in Sources */,
 				95CE324F2958AEEA0067BD9C /* CustomRoundedCorners.swift in Sources */,

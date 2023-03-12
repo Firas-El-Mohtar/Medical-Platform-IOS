@@ -7,15 +7,18 @@
 
 import Foundation
 
-struct Patient {
-    let id: Int
-    let patientFirstName: String
-    let patientLastName: String
-    let medicalRecord: [String: String]
-    let emergencyContactName: String
-    let emergencyContactNumber: String
-    let age: Int
-    let gender: String
-    let nationality: String
-    let drName: [String: String]
+struct Patient: Codable {
+    let email: String
+    let username: String
+    let firstname: String
+    let lastname: String
+    let phonenumber: String
+    let medicalRecord: [String]
+    let id: Int?
+    let emergencyContactName: String?
+    let emergencyContactNumber: String?
+    let age: Int?
+    let gender: String?
+    let nationality: String?
+    let drName: [String: String]?
 }

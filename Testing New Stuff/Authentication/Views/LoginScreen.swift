@@ -15,9 +15,11 @@ struct LoginScreen: View {
 }
 
 struct LoginView : View {
-    @State private var something = ""
+    @State private var email = ""
+    @State private var password = ""
     @State private var login = false
     @ObservedObject var viewModel = AuthenticationViewModel()
+    
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20){
@@ -30,10 +32,11 @@ struct LoginView : View {
                 .modifier(TextSubTitleStyle())
                 .padding(.bottom, 45)
             
-            TextField("Enter your Email or Phone Number", text: $something)
+            TextField("Enter your Email or Phone Number", text: $email)
+                .autocapitalization(.none)
                 .modifier(EditTextStyle())
                          
-            TextField("Enter your Password", text: $something)
+            TextField("Enter your Password", text: $password)
                 .modifier(EditTextStyle())
             
             Text("Forgot password?")
@@ -44,12 +47,14 @@ struct LoginView : View {
                 .frame(height: 50)
 
             Button(action: {
-                login = true
+                viewModel.login(userData: LoginPost(email: email, password: password))
+                //login = true
+    
             }) {
                 Text("Log In")
                     .modifier(ButtonFullScreenStyle())
-               
             }
+
             NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(true), isActive: $login){
               
                 }

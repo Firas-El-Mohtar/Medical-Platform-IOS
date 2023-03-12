@@ -30,8 +30,10 @@
 		95B7E3D729785D430050F1FB /* AppointmentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7E3D629785D430050F1FB /* AppointmentCardView.swift */; };
 		95C1EE472986A90B00DB0020 /* ExperimentalCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C1EE462986A90A00DB0020 /* ExperimentalCarousel.swift */; };
 		95C1EE492986BDDE00DB0020 /* DragGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C1EE482986BDDE00DB0020 /* DragGestures.swift */; };
+		95C6F35129AF3048008DB289 /* SignUpPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C6F35029AF3048008DB289 /* SignUpPost.swift */; };
 		95CE324F2958AEEA0067BD9C /* CustomRoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CE324E2958AEEA0067BD9C /* CustomRoundedCorners.swift */; };
 		95CE32542959CD420067BD9C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CE32532959CD420067BD9C /* AuthenticationViewModel.swift */; };
+		95D31D2329BC8371002B5B2C /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D31D2229BC8371002B5B2C /* LoginResponse.swift */; };
 		95E329B22968893100EAB129 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E329B12968893100EAB129 /* Constants.swift */; };
 		95E329B82969EBAD00EAB129 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E329B72969EBAD00EAB129 /* RegisterScreen.swift */; };
 		95E329BA2969EBB600EAB129 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E329B92969EBB600EAB129 /* LoginScreen.swift */; };
@@ -63,8 +65,10 @@
 		95B7E3D629785D430050F1FB /* AppointmentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCardView.swift; sourceTree = "<group>"; };
 		95C1EE462986A90A00DB0020 /* ExperimentalCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalCarousel.swift; sourceTree = "<group>"; };
 		95C1EE482986BDDE00DB0020 /* DragGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestures.swift; sourceTree = "<group>"; };
+		95C6F35029AF3048008DB289 /* SignUpPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPost.swift; sourceTree = "<group>"; };
 		95CE324E2958AEEA0067BD9C /* CustomRoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedCorners.swift; sourceTree = "<group>"; };
 		95CE32532959CD420067BD9C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		95D31D2229BC8371002B5B2C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		95E329B12968893100EAB129 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		95E329B72969EBAD00EAB129 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		95E329B92969EBB600EAB129 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 		955D1152296B2356008AFD23 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				95C6F35029AF3048008DB289 /* SignUpPost.swift */,
+				95D31D2229BC8371002B5B2C /* LoginResponse.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -187,6 +193,13 @@
 			path = CalendarComponent;
 			sourceTree = "<group>";
 		};
+		95C6F34B29AF2FDA008DB289 /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		95CE324D2958AEC40067BD9C /* customViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +221,7 @@
 		95CE32502958B6820067BD9C /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				95C6F34B29AF2FDA008DB289 /* data */,
 				955D1152296B2356008AFD23 /* Api */,
 				955D1151296B233B008AFD23 /* Views */,
 			);
@@ -291,6 +305,7 @@
 				95331C3C298E69AF00E26764 /* Patient.swift in Sources */,
 				95CE32542959CD420067BD9C /* AuthenticationViewModel.swift in Sources */,
 				950C4840298154D900503C06 /* BarView.swift in Sources */,
+				95D31D2329BC8371002B5B2C /* LoginResponse.swift in Sources */,
 				95605154297BF9090061D513 /* CustomCarousel.swift in Sources */,
 				95B7E3D729785D430050F1FB /* AppointmentCardView.swift in Sources */,
 				95E329B82969EBAD00EAB129 /* RegisterScreen.swift in Sources */,
@@ -300,6 +315,7 @@
 				95978F2429586D8F0056FE3A /* Testing_New_StuffApp.swift in Sources */,
 				950C48452981682D00503C06 /* BarGraph.swift in Sources */,
 				95C1EE492986BDDE00DB0020 /* DragGestures.swift in Sources */,
+				95C6F35129AF3048008DB289 /* SignUpPost.swift in Sources */,
 				95E329BC2969EF1100EAB129 /* extensions.swift in Sources */,
 				951741172974273500AD6ADB /* HomeScreen.swift in Sources */,
 				95B7E3D5297819900050F1FB /* SearchBar.swift in Sources */,

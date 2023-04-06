@@ -48,7 +48,7 @@ struct AppointmentCardView: View {
                             .stroke(Color.black, lineWidth: 0.5)
                             .background(.white))
 
-            .frame(width: .infinity, height: 200)
+            .frame(width: 350, height: 200)
         
     }
 }

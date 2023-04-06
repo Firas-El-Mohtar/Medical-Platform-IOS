@@ -116,17 +116,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FC040E16-40D3-4291-9888-D5D7B09F3291"
+            uuid = "7E9CCE8A-6911-4313-BDCE-7FDA1543064E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Testing New Stuff/Home/HomeTabView.swift"
+            filePath = "Testing New Stuff/customViews/DoctorCardView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
-            landmarkName = "HomeTabView"
-            landmarkType = "14">
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

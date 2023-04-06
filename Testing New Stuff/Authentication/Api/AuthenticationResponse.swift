@@ -8,8 +8,9 @@
 import Foundation
 
 
-struct LoginResponse: Codable {
+struct AuthenticationResponse: Codable {
     let httpStatus: Int
-    let data: Patient
+    let data: Patient?
+    let message: String?
 }
 

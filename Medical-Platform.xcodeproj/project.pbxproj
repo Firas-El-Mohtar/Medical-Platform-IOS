@@ -13,6 +13,10 @@
 		951741172974273500AD6ADB /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951741162974273500AD6ADB /* HomeScreen.swift */; };
 		9517411929743D8200AD6ADB /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517411829743D8200AD6ADB /* CustomTabBar.swift */; };
 		9517411B29743F3900AD6ADB /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517411A29743F3900AD6ADB /* TabViewModel.swift */; };
+		952E8B8F29BDFCA1006906DC /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E8B8E29BDFCA1006906DC /* AlertView.swift */; };
+		952E8B9229BE33C3006906DC /* FirstRegistrationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E8B9129BE33C3006906DC /* FirstRegistrationTab.swift */; };
+		952E8B9429BE3BC1006906DC /* SecondRegistrationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E8B9329BE3BC1006906DC /* SecondRegistrationTab.swift */; };
+		952E8B9629BEF9EA006906DC /* ThirdRegistrationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E8B9529BEF9EA006906DC /* ThirdRegistrationTab.swift */; };
 		95331C3C298E69AF00E26764 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95331C3B298E69AF00E26764 /* Patient.swift */; };
 		95331C3E298E6A1000E26764 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95331C3D298E6A1000E26764 /* Doctor.swift */; };
 		95331C40298E6A8D00E26764 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95331C3F298E6A8D00E26764 /* Hospital.swift */; };
@@ -24,20 +28,22 @@
 		95978F2829586D900056FE3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95978F2729586D900056FE3A /* Assets.xcassets */; };
 		95978F2B29586D900056FE3A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95978F2A29586D900056FE3A /* Preview Assets.xcassets */; };
 		95ADF7592985313B009566A3 /* BarGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ADF7582985313B009566A3 /* BarGraphViewModel.swift */; };
-		95ADF75E298565CC009566A3 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ADF75D298565CC009566A3 /* SwiftUIView.swift */; };
+		95ADF75E298565CC009566A3 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ADF75D298565CC009566A3 /* TimePicker.swift */; };
 		95B7E3D329759D060050F1FB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7E3D229759D060050F1FB /* HomeViewModel.swift */; };
 		95B7E3D5297819900050F1FB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7E3D4297819900050F1FB /* SearchBar.swift */; };
 		95B7E3D729785D430050F1FB /* AppointmentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7E3D629785D430050F1FB /* AppointmentCardView.swift */; };
+		95BE6E3829C1D8720064FCB6 /* TextFieldDynamicAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BE6E3729C1D8720064FCB6 /* TextFieldDynamicAdd.swift */; };
 		95C1EE472986A90B00DB0020 /* ExperimentalCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C1EE462986A90A00DB0020 /* ExperimentalCarousel.swift */; };
 		95C1EE492986BDDE00DB0020 /* DragGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C1EE482986BDDE00DB0020 /* DragGestures.swift */; };
 		95C6F35129AF3048008DB289 /* SignUpPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C6F35029AF3048008DB289 /* SignUpPost.swift */; };
 		95CE324F2958AEEA0067BD9C /* CustomRoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CE324E2958AEEA0067BD9C /* CustomRoundedCorners.swift */; };
 		95CE32542959CD420067BD9C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CE32532959CD420067BD9C /* AuthenticationViewModel.swift */; };
-		95D31D2329BC8371002B5B2C /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D31D2229BC8371002B5B2C /* LoginResponse.swift */; };
+		95D31D2329BC8371002B5B2C /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D31D2229BC8371002B5B2C /* AuthenticationResponse.swift */; };
 		95E329B22968893100EAB129 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E329B12968893100EAB129 /* Constants.swift */; };
 		95E329B82969EBAD00EAB129 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E329B72969EBAD00EAB129 /* RegisterScreen.swift */; };
 		95E329BA2969EBB600EAB129 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E329B92969EBB600EAB129 /* LoginScreen.swift */; };
 		95E329BC2969EF1100EAB129 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E329BB2969EF1100EAB129 /* extensions.swift */; };
+		95E8136D29CDF33A004F46DE /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8136C29CDF33A004F46DE /* PasswordField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +53,10 @@
 		951741162974273500AD6ADB /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		9517411829743D8200AD6ADB /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		9517411A29743F3900AD6ADB /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
+		952E8B8E29BDFCA1006906DC /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		952E8B9129BE33C3006906DC /* FirstRegistrationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRegistrationTab.swift; sourceTree = "<group>"; };
+		952E8B9329BE3BC1006906DC /* SecondRegistrationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRegistrationTab.swift; sourceTree = "<group>"; };
+		952E8B9529BEF9EA006906DC /* ThirdRegistrationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdRegistrationTab.swift; sourceTree = "<group>"; };
 		95331C3B298E69AF00E26764 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		95331C3D298E6A1000E26764 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		95331C3F298E6A8D00E26764 /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
@@ -59,20 +69,22 @@
 		95978F2729586D900056FE3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95978F2A29586D900056FE3A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95ADF7582985313B009566A3 /* BarGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphViewModel.swift; sourceTree = "<group>"; };
-		95ADF75D298565CC009566A3 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		95ADF75D298565CC009566A3 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		95B7E3D229759D060050F1FB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		95B7E3D4297819900050F1FB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		95B7E3D629785D430050F1FB /* AppointmentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCardView.swift; sourceTree = "<group>"; };
+		95BE6E3729C1D8720064FCB6 /* TextFieldDynamicAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDynamicAdd.swift; sourceTree = "<group>"; };
 		95C1EE462986A90A00DB0020 /* ExperimentalCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalCarousel.swift; sourceTree = "<group>"; };
 		95C1EE482986BDDE00DB0020 /* DragGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestures.swift; sourceTree = "<group>"; };
 		95C6F35029AF3048008DB289 /* SignUpPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPost.swift; sourceTree = "<group>"; };
 		95CE324E2958AEEA0067BD9C /* CustomRoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedCorners.swift; sourceTree = "<group>"; };
 		95CE32532959CD420067BD9C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
-		95D31D2229BC8371002B5B2C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		95D31D2229BC8371002B5B2C /* AuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
 		95E329B12968893100EAB129 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		95E329B72969EBAD00EAB129 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		95E329B92969EBB600EAB129 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		95E329BB2969EF1100EAB129 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		95E8136C29CDF33A004F46DE /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,16 @@
 				95B7E3D229759D060050F1FB /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		952E8B9029BE33AD006906DC /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				952E8B9129BE33C3006906DC /* FirstRegistrationTab.swift */,
+				952E8B9329BE3BC1006906DC /* SecondRegistrationTab.swift */,
+				952E8B9529BEF9EA006906DC /* ThirdRegistrationTab.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		95331C3A298E699700E26764 /* Model */ = {
@@ -120,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				95C6F35029AF3048008DB289 /* SignUpPost.swift */,
-				95D31D2229BC8371002B5B2C /* LoginResponse.swift */,
+				95D31D2229BC8371002B5B2C /* AuthenticationResponse.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -188,7 +210,7 @@
 		95ADF75C298565BF009566A3 /* CalendarComponent */ = {
 			isa = PBXGroup;
 			children = (
-				95ADF75D298565CC009566A3 /* SwiftUIView.swift */,
+				95ADF75D298565CC009566A3 /* TimePicker.swift */,
 			);
 			path = CalendarComponent;
 			sourceTree = "<group>";
@@ -203,6 +225,7 @@
 		95CE324D2958AEC40067BD9C /* customViews */ = {
 			isa = PBXGroup;
 			children = (
+				952E8B9029BE33AD006906DC /* Registration */,
 				95ADF75C298565BF009566A3 /* CalendarComponent */,
 				95ADF75629853117009566A3 /* BarGraph */,
 				95CE324E2958AEEA0067BD9C /* CustomRoundedCorners.swift */,
@@ -214,6 +237,9 @@
 				950C483B298146B700503C06 /* DoctorChip.swift */,
 				95C1EE462986A90A00DB0020 /* ExperimentalCarousel.swift */,
 				95C1EE482986BDDE00DB0020 /* DragGestures.swift */,
+				952E8B8E29BDFCA1006906DC /* AlertView.swift */,
+				95BE6E3729C1D8720064FCB6 /* TextFieldDynamicAdd.swift */,
+				95E8136C29CDF33A004F46DE /* PasswordField.swift */,
 			);
 			path = customViews;
 			sourceTree = "<group>";
@@ -300,19 +326,25 @@
 			files = (
 				953F78B9297EC01100E428ED /* DoctorCardView.swift in Sources */,
 				95978F2629586D8F0056FE3A /* ContentView.swift in Sources */,
-				95ADF75E298565CC009566A3 /* SwiftUIView.swift in Sources */,
+				95ADF75E298565CC009566A3 /* TimePicker.swift in Sources */,
 				950C483C298146B700503C06 /* DoctorChip.swift in Sources */,
+				952E8B9429BE3BC1006906DC /* SecondRegistrationTab.swift in Sources */,
+				952E8B9229BE33C3006906DC /* FirstRegistrationTab.swift in Sources */,
 				95331C3C298E69AF00E26764 /* Patient.swift in Sources */,
+				952E8B8F29BDFCA1006906DC /* AlertView.swift in Sources */,
 				95CE32542959CD420067BD9C /* AuthenticationViewModel.swift in Sources */,
 				950C4840298154D900503C06 /* BarView.swift in Sources */,
-				95D31D2329BC8371002B5B2C /* LoginResponse.swift in Sources */,
+				95D31D2329BC8371002B5B2C /* AuthenticationResponse.swift in Sources */,
 				95605154297BF9090061D513 /* CustomCarousel.swift in Sources */,
 				95B7E3D729785D430050F1FB /* AppointmentCardView.swift in Sources */,
 				95E329B82969EBAD00EAB129 /* RegisterScreen.swift in Sources */,
 				95ADF7592985313B009566A3 /* BarGraphViewModel.swift in Sources */,
+				95BE6E3829C1D8720064FCB6 /* TextFieldDynamicAdd.swift in Sources */,
 				956F7D67297598C400931ADF /* HomeTabView.swift in Sources */,
 				95331C3E298E6A1000E26764 /* Doctor.swift in Sources */,
+				95E8136D29CDF33A004F46DE /* PasswordField.swift in Sources */,
 				95978F2429586D8F0056FE3A /* Testing_New_StuffApp.swift in Sources */,
+				952E8B9629BEF9EA006906DC /* ThirdRegistrationTab.swift in Sources */,
 				950C48452981682D00503C06 /* BarGraph.swift in Sources */,
 				95C1EE492986BDDE00DB0020 /* DragGestures.swift in Sources */,
 				95C6F35129AF3048008DB289 /* SignUpPost.swift in Sources */,

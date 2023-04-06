@@ -55,14 +55,14 @@ struct HomeScreenView: View {
 
                     Button("Log In") {
                         viewModel.authenticationType = AuthenticationType.Login
-                        viewModel.logIn = true
+                        viewModel.login = true
                     }
                     .frame(width: 170, height: 50)
                     .modifier(ButtonStyle())
                     .foregroundColor(.primary)
 
 
-                    NavigationLink(destination: LoginScreen(), isActive: $viewModel.logIn){
+                    NavigationLink(destination: LoginScreen(), isActive: $viewModel.login){
 
                         }
                     

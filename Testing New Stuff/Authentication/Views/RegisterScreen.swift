@@ -17,15 +17,27 @@ struct RegisterScreen: View {
 
 struct RegisterView : View {
     
+    // Registration data
+    @State private var register = false
+    @State private var registrationIndex: Int = 0
+    @ObservedObject var viewModel = AuthenticationViewModel()
+    
+    
+    // first tab data
     @State private var firstName = ""
     @State private var lastName = ""
     @State private var email = ""
     @State private var phoneNumber = ""
     @State private var password = ""
-    @State private var confirmPassword = ""
+    @State private var isPasswordHidden: Bool = true
     
-    @State private var register = false
-    @ObservedObject var viewModel = AuthenticationViewModel()
+    // second tab data
+    @State var dateOfBirth = Date()
+    @State var emergencyContact: String = ""
+    @State var gender: String = ""
+    
+    // third tab data
+    
     
     var body: some View {
         ZStack (alignment: .leading){
@@ -35,44 +47,89 @@ struct RegisterView : View {
                     .modifier(TextTitleStyle())
                     .padding(.bottom, 10)
                 
-                Text("Please enter valid data as this is a crucial step for your profile")
+                Text("Please enter valid data as this is a crucial step \nfor your profile")
                     .modifier(TextDescriptionStyle())
+                    .fixedSize(horizontal: false, vertical: true)
                 
-                TextField("Enter your First Name", text: $firstName)
-                    .modifier(EditTextStyle())
-      
-                TextField("Enter your Last Name", text: $lastName)
-                    .modifier(EditTextStyle())
-          
-                TextField("Enter your Email or Phone Number", text: $email)
-                    .modifier(EditTextStyle())
+                NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(true), isActive: $viewModel.validRegistration){
+                  
+                    }
                 
-                TextField("Enter your Password", text: $password)
-                    .modifier(EditTextStyle())
-                                
-                TextField("Confirm Your Password", text: $confirmPassword)
-                    .modifier(EditTextStyle())
-
-                Button(action: {
-                    viewModel.postSignUpData(signUpData: SignUpPost(email: email, password: password, FirstName: firstName, LastName: lastName, PhoneNumber: nil))
-                    register = true
-                }) {
-                    Text("Register")
-                        .modifier(ButtonFullScreenStyle())
-                   
+                switch(registrationIndex) {
+                case 0:
+                    FirstRegistrationTab(viewModel: viewModel)
+                case 1:
+                    SecondRegistrationTab(viewModel: viewModel)
+                case 2:
+                    ThirdRegistrationTab(viewModel: viewModel)
+                default:
+                    Spacer()
+                    
                 }
-                .padding(.top, 15)
                 
                 
                 Spacer()
-                NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(true), isActive: $register){
-                    }
                 
+                HStack {
+                    if registrationIndex != 0 {
+                        Image(systemName: "arrow.left")
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 20, height: 20)
+                            .padding(.trailing, 15)
+                            .onTapGesture {
+                                registrationIndex = registrationIndex - 1
+                            }
+                    }
+                    Spacer()
+                    
+                    if registrationIndex < 2 {
+                        Image(systemName: "arrow.forward")
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 20, height: 20)
+                            .padding(.leading, 15)
+                            .onTapGesture {
+                                registrationIndex = registrationIndex + 1
+                            }
+                    }
+                    
+                    if registrationIndex == 2 {
+                        Button(action: {
+                            viewModel.login(userData: LoginPost(email: email, password: password))
+                
+                        }) {
+                            Text("Log In")
+                        }
+
+                        NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(true), isActive: $viewModel.validRegistration){
+                          
+                            }
+                    }
                 }
-            .padding([.leading, .trailing], 20)
+                Spacer()
+                    .frame(height: 25)
+            
             }
-        .modifier(BackgroundStyle())
+            .padding([.leading, .trailing], 20)
+            
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .scaleEffect(2)
+            }
         }
+        .modifier(BackgroundStyle())
+        .alert(isPresented: Binding<Bool>(
+                get: { viewModel.authenticationError != "" },
+                set: { _ in viewModel.authenticationError = "" }
+        )) {
+            Alert(title: Text("Error"), message: Text(viewModel.authenticationError), dismissButton: .default(Text("OK")))
+        }
+        }
+    
 }
 
 struct RegisterScreen_Previews: PreviewProvider {

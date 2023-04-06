@@ -18,53 +18,67 @@ struct LoginView : View {
     @State private var email = ""
     @State private var password = ""
     @State private var login = false
+    @State private var isPasswordHidden: Bool = true
     @ObservedObject var viewModel = AuthenticationViewModel()
     
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20){
-            
-            Text("Let's sign you in")
-                .modifier(TextTitleStyle())
-                .padding(.bottom, 10)
-            
-            Text("Welcome Back, \nyou've been missed")
-                .modifier(TextSubTitleStyle())
-                .padding(.bottom, 45)
-            
-            TextField("Enter your Email or Phone Number", text: $email)
-                .autocapitalization(.none)
-                .modifier(EditTextStyle())
-                         
-            TextField("Enter your Password", text: $password)
-                .modifier(EditTextStyle())
-            
-            Text("Forgot password?")
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .modifier(TextDescriptionStyle())
-            
-            Spacer()
-                .frame(height: 50)
+        
+        ZStack(alignment: .center){
+            VStack(alignment: .leading, spacing: 20){
+                
+                Text("Let's sign you in")
+                    .modifier(TextTitleStyle())
+                    .padding(.bottom, 10)
+                
+                Text("Welcome Back, \nyou've been missed")
+                    .modifier(TextSubTitleStyle())
+                    .padding(.bottom, 45)
+                
+                TextField("Enter your Email or Phone Number", text: $email)
+                    .autocapitalization(.none)
+                    .modifier(EditTextStyle())
+                             
+                PasswordField(viewModel: viewModel)
+                
+                Text("Forgot password?")
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .modifier(TextDescriptionStyle())
+                
+                Spacer()
+                    .frame(height: 50)
 
-            Button(action: {
-                viewModel.login(userData: LoginPost(email: email, password: password))
-                //login = true
-    
-            }) {
-                Text("Log In")
-                    .modifier(ButtonFullScreenStyle())
-            }
-
-            NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(true), isActive: $login){
-              
+                Button(action: {
+                    viewModel.login(userData: LoginPost(email: email, password: password))
+        
+                }) {
+                    Text("Log In")
+                        .modifier(ButtonFullScreenStyle())
                 }
+
+                NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(true), isActive: $viewModel.validRegistration){
+                  
+                    }
+                
+                Spacer()
             
-            Spacer()
-        
-        
+            
+                }
+            .padding([.leading, .trailing], 25)
+            .alert(isPresented: Binding<Bool>(
+                    get: { viewModel.authenticationError != "" },
+                    set: { _ in viewModel.authenticationError = "" }
+            )) {
+                Alert(title: Text("Error"), message: Text(viewModel.authenticationError), dismissButton: .default(Text("OK")))
             }
-        .padding([.leading, .trailing], 25)
-        .modifier(BackgroundStyle())
+            
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .scaleEffect(2)
+            }
+        
+            }.modifier(BackgroundStyle())
     }
 }
 

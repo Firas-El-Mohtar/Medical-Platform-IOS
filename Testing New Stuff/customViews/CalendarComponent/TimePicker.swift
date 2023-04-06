@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+struct TimePicker: View {
     @State var selectedDate: Date = Date()
     @State var selectedHour: String = ""
     let validHours: [String] = ["8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM","4:00 PM","5:00 PM","6:00 PM"]
@@ -31,6 +31,6 @@ struct SwiftUIView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView()
+        TimePicker()
     }
 }

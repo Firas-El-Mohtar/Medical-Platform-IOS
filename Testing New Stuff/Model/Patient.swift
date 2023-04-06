@@ -9,16 +9,15 @@ import Foundation
 
 struct Patient: Codable {
     let email: String
-    let username: String
-    let firstname: String
-    let lastname: String
-    let phonenumber: String
-    let medicalRecord: [String]
+    let userName: String
+    let firstName: String
+    let lastName: String
+    let phoneNumber: String
+    let medicalRecord: [String: [String]]
     let id: Int?
-    let emergencyContactName: String?
-    let emergencyContactNumber: String?
-    let age: Int?
+    let emergencyContact: String?
+    let dateOfBirth: Int?
     let gender: String?
     let nationality: String?
-    let drName: [String: String]?
+    
 }

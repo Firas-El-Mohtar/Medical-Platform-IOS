@@ -54,7 +54,6 @@ struct EditTextStyle : ViewModifier {
             .padding(16)
             .background(Constants.editTextBackground)
             .cornerRadius(6.0)
-            .shadow(radius: 4.0)
         
     }
 }

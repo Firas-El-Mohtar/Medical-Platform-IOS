@@ -70,6 +70,17 @@ struct ButtonFullScreenStyle : ViewModifier {
             .cornerRadius(10)
     }
 }
+struct ButtonFullScreenConfirmStyle : ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(width: 320, height: 20, alignment: .center)
+            .font(.headline)
+            .foregroundColor(.white)
+            .padding()
+            .background(.green)
+            .cornerRadius(10)
+    }
+}
 
 struct TextViewTabStyle: ViewModifier {
     func body(content: Content) -> some View {

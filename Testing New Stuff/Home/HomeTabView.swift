@@ -98,6 +98,7 @@ struct HomeTabView: View {
     ]
     @State var search = ""
     @State var tapped = false
+    @State var qrCode = false
     @State var index = 0
     var body: some View {
         ZStack {
@@ -107,6 +108,9 @@ struct HomeTabView: View {
                         .resizable()
                         .renderingMode(.template)
                         .frame(width: 30, height: 30)
+                        .onTapGesture {
+                            qrCode = true
+                        }
                     Spacer()
                     Image(systemName: "person.crop.circle")
                         .resizable()
@@ -142,6 +146,9 @@ struct HomeTabView: View {
                       }
                     
                     NavigationLink(destination: DoctorDetails(doctor: doctors[index]), isActive: $tapped){
+
+                        }
+                    NavigationLink(destination: QRCodeScreen(), isActive: $qrCode){
 
                         }
                 }

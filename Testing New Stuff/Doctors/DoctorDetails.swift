@@ -10,7 +10,7 @@ import SwiftUI
 
 struct DoctorDetails: View {
     let doctor: Doctor
-    @State private var app: Bool = false
+    @State private var showBottomSheet = false
     var body: some View {
         ScrollView{
             VStack(alignment: .leading){
@@ -38,13 +38,66 @@ struct DoctorDetails: View {
                 Text("Contact Number: \(doctor.emergencyContactNumber)")
                     .padding([.leading], 55)
                 Button(action: {
-                    app = true
+                    showBottomSheet = true
                 }) {
                     Text("Setup Appointment")
                         .modifier(ButtonFullScreenStyle())
                 } .padding([.leading], 25)
             }
-        }.modifier(BackgroundStyle())
+        }.navigationBarTitle("", displayMode: .inline)
+            .modifier(BackgroundStyle())
+            .sheet(isPresented: $showBottomSheet) {
+                BottomSheetView(isPresented: self.$showBottomSheet, doctor: self.doctor)
+                    }
+    }
+}
+
+
+struct BottomSheetView: View {
+    @Binding var isPresented: Bool
+    let doctor: Doctor
+    @State var startDate = Date()
+    @State var endDate = Date()
+    @State var appointmentTitle = ""
+    @State var appointmentDes = ""
+    
+    var body: some View {
+        VStack{
+            HStack{
+                Spacer()
+                Button("Close") {
+                    self.isPresented = false
+                }.padding(.top, 25)
+            }
+            Text("Setting up an appointment")
+                .modifier(TextTitleStyle())
+            
+            TextField("Enter your Appointment Title", text: $appointmentTitle)
+                .modifier(EditTextStyle())
+                .autocapitalization(.none)
+            
+            DatePicker("Appointment Date", selection: $startDate, in : ...Date(), displayedComponents:  [.date, .hourAndMinute])
+            
+            TextField("Brief Description", text: $appointmentDes)
+                .modifier(EditTextStyle())
+                .autocapitalization(.none)
+            
+            Text("Doctors Name: \(doctor.firstName) \(doctor.lastName)")
+                .modifier(TextDescriptionStyle())
+            
+            Text("Doctors Speciality: \(doctor.speciality)")
+                .modifier(TextDescriptionStyle())
+            Spacer()
+            Button(action: {
+                // api call
+            }) {
+                Text("Confirm Appointment")
+                    .modifier(ButtonFullScreenConfirmStyle())
+            }
+            
+            
+        }.padding([.leading, .trailing], 25)
+            .modifier(BackgroundStyle())
     }
 }
 

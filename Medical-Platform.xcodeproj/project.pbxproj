@@ -24,6 +24,12 @@
 		95476E1629DEF8EE009A2B1F /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95476E1529DEF8EE009A2B1F /* StarRating.swift */; };
 		95476E1829DEFFB6009A2B1F /* DoctorDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95476E1729DEFFB6009A2B1F /* DoctorDetails.swift */; };
 		95476E1B29E02AC8009A2B1F /* DoctorTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95476E1A29E02AC8009A2B1F /* DoctorTab.swift */; };
+		95476E2029E02CCF009A2B1F /* AppointmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95476E1F29E02CCF009A2B1F /* AppointmentScreen.swift */; };
+		95476E2329E03F6D009A2B1F /* MedicineChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95476E2229E03F6D009A2B1F /* MedicineChip.swift */; };
+		95476E2529E040E6009A2B1F /* MedicineCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95476E2429E040E6009A2B1F /* MedicineCardView.swift */; };
+		95476E2729E040F4009A2B1F /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95476E2629E040F4009A2B1F /* Medicine.swift */; };
+		95476E2929E0419B009A2B1F /* MedicineScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95476E2829E0419B009A2B1F /* MedicineScreen.swift */; };
+		95476E2C29E0496C009A2B1F /* QRCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95476E2B29E0496C009A2B1F /* QRCodeScreen.swift */; };
 		95605154297BF9090061D513 /* CustomCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95605153297BF9090061D513 /* CustomCarousel.swift */; };
 		956F7D67297598C400931ADF /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F7D66297598C400931ADF /* HomeTabView.swift */; };
 		95978F2429586D8F0056FE3A /* Testing_New_StuffApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95978F2329586D8F0056FE3A /* Testing_New_StuffApp.swift */; };
@@ -67,6 +73,12 @@
 		95476E1529DEF8EE009A2B1F /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
 		95476E1729DEFFB6009A2B1F /* DoctorDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetails.swift; sourceTree = "<group>"; };
 		95476E1A29E02AC8009A2B1F /* DoctorTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorTab.swift; sourceTree = "<group>"; };
+		95476E1F29E02CCF009A2B1F /* AppointmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentScreen.swift; sourceTree = "<group>"; };
+		95476E2229E03F6D009A2B1F /* MedicineChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineChip.swift; sourceTree = "<group>"; };
+		95476E2429E040E6009A2B1F /* MedicineCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCardView.swift; sourceTree = "<group>"; };
+		95476E2629E040F4009A2B1F /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
+		95476E2829E0419B009A2B1F /* MedicineScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineScreen.swift; sourceTree = "<group>"; };
+		95476E2B29E0496C009A2B1F /* QRCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScreen.swift; sourceTree = "<group>"; };
 		95605153297BF9090061D513 /* CustomCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCarousel.swift; sourceTree = "<group>"; };
 		956F7D66297598C400931ADF /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		95978F2029586D8F0056FE3A /* Medical Platform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Medical Platform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +142,7 @@
 				95331C3B298E69AF00E26764 /* Patient.swift */,
 				95331C3D298E6A1000E26764 /* Doctor.swift */,
 				95331C3F298E6A8D00E26764 /* Hospital.swift */,
+				95476E2629E040F4009A2B1F /* Medicine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +150,9 @@
 		95476E1929E02ABB009A2B1F /* Doctors */ = {
 			isa = PBXGroup;
 			children = (
+				95476E1729DEFFB6009A2B1F /* DoctorDetails.swift */,
+				950C483B298146B700503C06 /* DoctorChip.swift */,
+				953F78B8297EC01100E428ED /* DoctorCardView.swift */,
 				95476E1A29E02AC8009A2B1F /* DoctorTab.swift */,
 			);
 			path = Doctors;
@@ -145,8 +161,27 @@
 		95476E1C29E02C87009A2B1F /* Appointment */ = {
 			isa = PBXGroup;
 			children = (
+				95476E1F29E02CCF009A2B1F /* AppointmentScreen.swift */,
 			);
 			path = Appointment;
+			sourceTree = "<group>";
+		};
+		95476E2129E03F5C009A2B1F /* Medicine */ = {
+			isa = PBXGroup;
+			children = (
+				95476E2229E03F6D009A2B1F /* MedicineChip.swift */,
+				95476E2429E040E6009A2B1F /* MedicineCardView.swift */,
+				95476E2829E0419B009A2B1F /* MedicineScreen.swift */,
+			);
+			path = Medicine;
+			sourceTree = "<group>";
+		};
+		95476E2A29E0494B009A2B1F /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				95476E2B29E0496C009A2B1F /* QRCodeScreen.swift */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		955D1151296B233B008AFD23 /* Views */ = {
@@ -197,6 +232,8 @@
 		95978F2229586D8F0056FE3A /* Testing New Stuff */ = {
 			isa = PBXGroup;
 			children = (
+				95476E2A29E0494B009A2B1F /* QRCode */,
+				95476E2129E03F5C009A2B1F /* Medicine */,
 				95476E1C29E02C87009A2B1F /* Appointment */,
 				95476E1929E02ABB009A2B1F /* Doctors */,
 				95331C3A298E699700E26764 /* Model */,
@@ -256,15 +293,12 @@
 				95B7E3D4297819900050F1FB /* SearchBar.swift */,
 				95B7E3D629785D430050F1FB /* AppointmentCardView.swift */,
 				95605153297BF9090061D513 /* CustomCarousel.swift */,
-				953F78B8297EC01100E428ED /* DoctorCardView.swift */,
-				950C483B298146B700503C06 /* DoctorChip.swift */,
 				95C1EE462986A90A00DB0020 /* ExperimentalCarousel.swift */,
 				95C1EE482986BDDE00DB0020 /* DragGestures.swift */,
 				952E8B8E29BDFCA1006906DC /* AlertView.swift */,
 				95BE6E3729C1D8720064FCB6 /* TextFieldDynamicAdd.swift */,
 				95E8136C29CDF33A004F46DE /* PasswordField.swift */,
 				95476E1529DEF8EE009A2B1F /* StarRating.swift */,
-				95476E1729DEFFB6009A2B1F /* DoctorDetails.swift */,
 			);
 			path = customViews;
 			sourceTree = "<group>";
@@ -355,7 +389,10 @@
 				950C483C298146B700503C06 /* DoctorChip.swift in Sources */,
 				952E8B9429BE3BC1006906DC /* SecondRegistrationTab.swift in Sources */,
 				952E8B9229BE33C3006906DC /* FirstRegistrationTab.swift in Sources */,
+				95476E2529E040E6009A2B1F /* MedicineCardView.swift in Sources */,
+				95476E2729E040F4009A2B1F /* Medicine.swift in Sources */,
 				95476E1629DEF8EE009A2B1F /* StarRating.swift in Sources */,
+				95476E2329E03F6D009A2B1F /* MedicineChip.swift in Sources */,
 				95331C3C298E69AF00E26764 /* Patient.swift in Sources */,
 				95476E1B29E02AC8009A2B1F /* DoctorTab.swift in Sources */,
 				952E8B8F29BDFCA1006906DC /* AlertView.swift in Sources */,
@@ -366,12 +403,14 @@
 				95605154297BF9090061D513 /* CustomCarousel.swift in Sources */,
 				95B7E3D729785D430050F1FB /* AppointmentCardView.swift in Sources */,
 				95E329B82969EBAD00EAB129 /* RegisterScreen.swift in Sources */,
+				95476E2029E02CCF009A2B1F /* AppointmentScreen.swift in Sources */,
 				95ADF7592985313B009566A3 /* BarGraphViewModel.swift in Sources */,
 				95BE6E3829C1D8720064FCB6 /* TextFieldDynamicAdd.swift in Sources */,
 				956F7D67297598C400931ADF /* HomeTabView.swift in Sources */,
 				95331C3E298E6A1000E26764 /* Doctor.swift in Sources */,
 				95E8136D29CDF33A004F46DE /* PasswordField.swift in Sources */,
 				95978F2429586D8F0056FE3A /* Testing_New_StuffApp.swift in Sources */,
+				95476E2C29E0496C009A2B1F /* QRCodeScreen.swift in Sources */,
 				952E8B9629BEF9EA006906DC /* ThirdRegistrationTab.swift in Sources */,
 				950C48452981682D00503C06 /* BarGraph.swift in Sources */,
 				95C1EE492986BDDE00DB0020 /* DragGestures.swift in Sources */,
@@ -387,6 +426,7 @@
 				95E329BA2969EBB600EAB129 /* LoginScreen.swift in Sources */,
 				95E329B22968893100EAB129 /* Constants.swift in Sources */,
 				95CE324F2958AEEA0067BD9C /* CustomRoundedCorners.swift in Sources */,
+				95476E2929E0419B009A2B1F /* MedicineScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

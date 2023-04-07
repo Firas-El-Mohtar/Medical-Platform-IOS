@@ -28,7 +28,7 @@ struct HomeView: View {
               case .doctors:
                   DoctorTab()
               case .pharmacies:
-                  Text("Hello pharmacies")
+                  MedicineScreen()
               case .profile:
                   Text("Hello profile")
               }

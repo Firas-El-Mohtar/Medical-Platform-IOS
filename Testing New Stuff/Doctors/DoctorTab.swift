@@ -1,13 +1,13 @@
 //
-//  HomeTabView.swift
+//  DoctorTab.swift
 //  Medical-Platform
 //
-//  Created by Firas El Mohtar on 16/01/2023.
+//  Created by Firas El Mohtar on 07/04/2023.
 //
 
 import SwiftUI
-struct HomeTabView: View {
-    @ObservedObject private var viewModel = HomeViewModel()
+
+struct DoctorTab: View {
     let doctors = [
         Doctor(
             id: "1",
@@ -96,69 +96,34 @@ struct HomeTabView: View {
             patients: ["3": "Mike Jones", "4": "Sara Lee"]
         )
     ]
-    @State var search = ""
+    @State var searchText: String = ""
     @State var tapped = false
     @State var index = 0
     var body: some View {
-        ZStack {
-            VStack(alignment: .leading, spacing: 5) {
-                HStack(alignment: .top) {
-                    Image(systemName: "qrcode")
-                        .resizable()
-                        .renderingMode(.template)
-                        .frame(width: 30, height: 30)
-                    Spacer()
-                    Image(systemName: "person.crop.circle")
-                        .resizable()
-                        .renderingMode(.template)
-                        .frame(width: 30, height: 30)
-                }
-                .padding(.horizontal, 25)
-                .padding(.top, 25)
+        VStack{
+            SearchBar(text: $searchText)
+                .padding([.vertical, .horizontal], 25)
+            ScrollView{
+                ForEach(doctors.indices, id: \.self) { index in
+                          DoctorCardView(doctor:  doctors[index])
+                              .foregroundColor(.black)
+                              .background(Color.white)
+                              .onTapGesture {
+                                  tapped = true
+                                  self.index = index
+                              }
+                  }
                 
-                Text("Hello \(viewModel.userName)")
-                    .modifier(TextSubTitleStyle())
-                    .padding(.horizontal, 25)
-                
-                SearchBar(text: $search)
-                    .padding([.vertical, .horizontal], 25)
-                
-                ScrollView {
-                    LazyVStack(spacing: 10) {
-                        Text("Upcoming Appointments")
-                            .modifier(TextDescriptionStyle())
-                            .padding(.horizontal, 25)
-                        
-                        CustomCarousel()
+                NavigationLink(destination: DoctorDetails(doctor: doctors[index]).navigationBarBackButtonHidden(false), isActive: $tapped){
+
                     }
-                    ForEach(doctors.indices, id: \.self) { index in
-                              DoctorCardView(doctor:  doctors[index])
-                                  .foregroundColor(.black)
-                                  .background(Color.white)
-                                  .onTapGesture {
-                                      tapped = true
-                                      self.index = index
-                                  }
-                      }
-                    
-                    NavigationLink(destination: DoctorDetails(doctor: doctors[index]), isActive: $tapped){
-
-                        }
-                }
             }
-            .modifier(BackgroundStyle())
-            
-        }
+        }.modifier(BackgroundStyle())
     }
 }
 
-
-struct HomeTabView_Previews: PreviewProvider {
+struct DoctorTab_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            HomeTabView()
-    
-        }
+        DoctorTab()
     }
 }
-

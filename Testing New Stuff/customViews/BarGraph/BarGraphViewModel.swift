@@ -11,8 +11,8 @@ import SwiftUI
 
 class BarGraphViewModel: ObservableObject {
     @Published var data: [CGFloat] = [10,10,10,10,10,10,10]
-    @Published var start: Int = 1
-    @Published var end: Int = 25
+    @Published var start: Int = 5
+    @Published var end: Int = 15
     @Published var daysOfWeek: [String] = ["Mon", "Tues", "Wed", "Thur", "Fri", "Sat", "Sun"]
     
     func formatTime(hour: Int) -> String {

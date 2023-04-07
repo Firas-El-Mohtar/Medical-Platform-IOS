@@ -5,13 +5,15 @@
 //  Created by Firas El Mohtar on 06/04/2023.
 //
 
+
 import SwiftUI
 
 struct DoctorDetails: View {
     let doctor: Doctor
+    @State private var app: Bool = false
     var body: some View {
         ScrollView{
-            VStack{
+            VStack(alignment: .leading){
                 HStack(spacing: 20){
                     Image(systemName: "person.circle.fill")
                         .resizable()
@@ -21,11 +23,28 @@ struct DoctorDetails: View {
                         StarRating(rating: 3.5)
                     }
                 }
+                .padding([.leading, .top], 55)
                 Text("\(doctor.speciality)")
-                Spacer()
+                    .padding([.leading], 55)
+                Text("Operating Hours")
+                    .padding([.leading], 55)
                 BarGraph()
+                Text("Works at: \(doctor.hospitalAffliation)")
+                    .padding([.leading], 55)
+                Text("License Number: \(doctor.licenseNumber)")
+                    .padding([.leading], 55)
+                Text("Contact Name: \(doctor.emergencyContactName)")
+                    .padding([.leading], 55)
+                Text("Contact Number: \(doctor.emergencyContactNumber)")
+                    .padding([.leading], 55)
+                Button(action: {
+                    app = true
+                }) {
+                    Text("Setup Appointment")
+                        .modifier(ButtonFullScreenStyle())
+                } .padding([.leading], 25)
             }
-        }
+        }.modifier(BackgroundStyle())
     }
 }
 

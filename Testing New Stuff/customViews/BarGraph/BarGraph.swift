@@ -42,7 +42,7 @@ struct BarGraph: View {
         .padding(.horizontal, 20)
         .padding(5)
         .background(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 0.5).background(.white))
-        .frame(width: .infinity, height: 250)
+        .frame(width: 400, height: 250)
     }
 
 }

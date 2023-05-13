@@ -9,7 +9,10 @@ import SwiftUI
 
 struct QRCodeScreen: View {
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .center){
+            HStack{
+                Spacer()
+            }
             Text("Wishing you a \nspeedy recovery")
                 .modifier(TextTitleStyle())
             Spacer()

@@ -49,7 +49,8 @@ struct LoginView : View {
                     .frame(height: 50)
 
                 Button(action: {
-                    viewModel.login(userData: LoginPost(email: email, password: password))
+                    print("email: \(email), password: \(viewModel.password)")
+                    viewModel.login(userData: LoginPost(email: email, password: viewModel.password))
         
                 }) {
                     Text("Log In")

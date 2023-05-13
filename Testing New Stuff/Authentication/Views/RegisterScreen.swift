@@ -98,10 +98,10 @@ struct RegisterView : View {
                     
                     if registrationIndex == 2 {
                         Button(action: {
-                            viewModel.login(userData: LoginPost(email: email, password: password))
-                
+                            viewModel.signUp(signUpData: SignUpPost(email: viewModel.email, password: viewModel.password, userName: "\(viewModel.firstName)\(viewModel.lastName)", firstName: viewModel.firstName, lastName: viewModel.lastName, phoneNumber: viewModel.phoneNumber, gender: viewModel.gender, medicalRecord: MedicalRecord(diseases: viewModel.allergyText), nationality: viewModel.gender, emergencyContact: viewModel.emergencyContact))
+                            print(viewModel.password)
                         }) {
-                            Text("Log In")
+                            Text("Sign Up")
                         }
 
                         NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(true), isActive: $viewModel.validRegistration){
@@ -119,6 +119,7 @@ struct RegisterView : View {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle())
                     .scaleEffect(2)
+                    .padding([.trailing, .leading], 200)
             }
         }
         .modifier(BackgroundStyle())

@@ -24,6 +24,7 @@ struct HomeScreenView: View {
     var body : some View {
         ZStack {
             VStack{
+                Spacer()
                 Image(systemName: "waveform.path.ecg.rectangle")
                     .renderingMode(.original)
                     .resizable()

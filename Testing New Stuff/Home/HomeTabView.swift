@@ -99,6 +99,7 @@ struct HomeTabView: View {
     @State var search = ""
     @State var tapped = false
     @State var qrCode = false
+    @State var profile = false
     @State var index = 0
     var body: some View {
         ZStack {
@@ -116,13 +117,16 @@ struct HomeTabView: View {
                         .resizable()
                         .renderingMode(.template)
                         .frame(width: 30, height: 30)
+                        .onTapGesture {
+                            profile = true
+                        }
                 }
                 .padding(.horizontal, 25)
                 .padding(.top, 25)
                 
                 Text("Hello \(viewModel.userName)")
                     .modifier(TextSubTitleStyle())
-                    .padding(.horizontal, 25)
+                    .padding([.horizontal, .vertical], 25)
                 
                 SearchBar(text: $search)
                     .padding([.vertical, .horizontal], 25)
@@ -144,11 +148,16 @@ struct HomeTabView: View {
                                       self.index = index
                                   }
                       }
+                    Spacer()
+                        .frame(height:100)
                     
                     NavigationLink(destination: DoctorDetails(doctor: doctors[index]), isActive: $tapped){
 
                         }
                     NavigationLink(destination: QRCodeScreen(), isActive: $qrCode){
+
+                        }
+                    NavigationLink(destination: ProfileView(), isActive: $profile){
 
                         }
                 }

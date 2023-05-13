@@ -113,7 +113,8 @@ struct DoctorTab: View {
                                   self.index = index
                               }
                   }
-                
+                Spacer()
+                    .frame(height:100)
                 NavigationLink(destination: DoctorDetails(doctor: doctors[index]).navigationBarBackButtonHidden(false), isActive: $tapped){
 
                     }

@@ -10,7 +10,7 @@ import SwiftUI
 struct MedicineCardView: View {
     let medicine: Medicine
     var body: some View {
-    HStack{
+    HStack(){
         Image(systemName: "rectangle")
             .resizable()
             .frame(width: 50, height: 65)
@@ -21,10 +21,10 @@ struct MedicineCardView: View {
             }
         }
     .padding()
-    .background(RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.black, lineWidth: 1)
-                    .background(.white))
-    .frame(width: 350, height: 100)
+//    .background(RoundedRectangle(cornerRadius: 10)
+//                    .stroke(Color.black, lineWidth: 1)
+//                    .background(.white))
+//    .frame(width: 350, height: 100)
     }
     
 }

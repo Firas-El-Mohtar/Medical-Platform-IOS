@@ -30,7 +30,7 @@ struct HomeView: View {
               case .pharmacies:
                   MedicineScreen()
               case .profile:
-                  Text("Hello profile")
+                  ProfileView()
               }
                CustomTabBar(selectedTab: $selectedTab)
                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)

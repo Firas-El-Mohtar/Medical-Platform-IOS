@@ -27,13 +27,13 @@ struct MedicineScreen: View {
     ]
     @State var searchText = ""
     var body: some View {
-            VStack{
+        VStack(alignment: .leading){
                 SearchBar(text: $searchText)
                 ScrollView{
-                ForEach(medicineList.indices, id:  \.self) { index in
-                    MedicineCardView(medicine: medicineList[index])
+                    ForEach(medicineList.indices, id:  \.self) { index in
+                        MedicineCardView(medicine: medicineList[index])
+                    }
                 }
-            }
             }.padding(25)
             .modifier(BackgroundStyle())
     }

@@ -24,11 +24,11 @@ struct CustomTabBar: View {
                 selectedTab = .home
             } label: {
                 GeometryReader { geo in
-                    VStack (alignment: .center, spacing: 4) {
+                    VStack (alignment: .center, spacing: 2) {
                         Image(systemName: selectedTab == .home ? "house.fill" : "house")
                             .resizable()
                             .scaledToFit()
-                            .scaleEffect(selectedTab == .home ? 1.15 : 1.0)
+                            .scaleEffect(selectedTab == .home ? 1.10 : 1.0)
                             .frame(width: 22, height: 22)
                         Text("Home")
                             .modifier(TextViewTabStyle())
@@ -43,11 +43,11 @@ struct CustomTabBar: View {
                 selectedTab = .doctors
             } label: {
                 GeometryReader { geo in
-                    VStack (alignment: .center, spacing: 4) {
+                    VStack (alignment: .center, spacing: 2) {
                         Image(systemName: selectedTab == .doctors ? "person.text.rectangle.fill" : "person.text.rectangle")
                             .resizable()
                             .scaledToFit()
-                            .scaleEffect(selectedTab == .doctors ? 1.15 : 1.0)
+                            .scaleEffect(selectedTab == .doctors ? 1.10 : 1.0)
                             .frame(width: 22, height: 22)
                         Text("Doctors")
                             .modifier(TextViewTabStyle())
@@ -63,11 +63,11 @@ struct CustomTabBar: View {
                 selectedTab = .pharmacies
             } label: {
                 GeometryReader { geo in
-                    VStack (alignment: .center, spacing: 4) {
+                    VStack (alignment: .center, spacing: 2) {
                         Image(systemName: selectedTab == .pharmacies ? "cross.fill" : "cross")
                             .resizable()
                             .scaledToFit()
-                            .scaleEffect(selectedTab == .pharmacies ? 1.15 : 1.0)
+                            .scaleEffect(selectedTab == .pharmacies ? 1.10 : 1.0)
                             .frame(width: 22, height: 22)
                         Text("Pharmacies")
                             .modifier(TextViewTabStyle())
@@ -87,11 +87,11 @@ struct CustomTabBar: View {
             } label: {
                 
                 GeometryReader { geo in
-                    VStack (alignment: .center, spacing: 4) {
+                    VStack (alignment: .center, spacing: 2) {
                         Image(systemName: selectedTab == .profile ? "person.fill" : "person")
                             .resizable()
                             .scaledToFit()
-                            .scaleEffect(selectedTab == .profile ? 1.15 : 1.0)
+                            .scaleEffect(selectedTab == .profile ? 1.10 : 1.0)
                             .frame(width: 22, height: 22)
                         Text("Profile")
                             .modifier(TextViewTabStyle())
@@ -120,6 +120,6 @@ struct CustomTabBar: View {
 
 struct CustomTabBar_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTabBar(selectedTab: .constant(.profile)).preferredColorScheme(.light)
+        CustomTabBar(selectedTab: .constant(.pharmacies)).preferredColorScheme(.light)
     }
 }

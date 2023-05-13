@@ -15,6 +15,8 @@ class AuthenticationViewModel : ObservableObject {
         willSet { objectWillChange.send() }
     }
     
+    @Published private var apiError: Error?
+    
     @Published var authenticationType: AuthenticationType = AuthenticationType.Login
     
     
@@ -107,6 +109,11 @@ class AuthenticationViewModel : ObservableObject {
                                 self.validRegistration = true
                             }
                         }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.validRegistration = true
+                            self.isLoading = false
+                        }
                     }
                 } catch {
                     print(error.localizedDescription)
@@ -117,61 +124,63 @@ class AuthenticationViewModel : ObservableObject {
     
    
     func login(userData: LoginPost) {
-//        isLoading = true
-//        guard let url = URL(string: "http://3.73.164.18/api/v1/loginService/login") else { return }
-//
-//          var request = URLRequest(url: url)
-//          request.httpMethod = "POST"
-//          request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//
-//          let userData = LoginPost(email: email, password: password)
-//
-//          let encoder = JSONEncoder()
-//          do {
-//              let jsonData = try encoder.encode(userData)
-//              request.httpBody = jsonData
-//          } catch {
-//              print(error.localizedDescription)
-//              DispatchQueue.main.async {
-//                  self.authenticationError = error.localizedDescription
-//              }
-//              return
-//          }
-//
-//          URLSession.shared.dataTask(with: request) { data, response, error in
-//              guard error == nil else {
-//                  print(error!.localizedDescription)
-//                  DispatchQueue.main.async {
-//                      self.authenticationError = error!.localizedDescription
-//                  }
-//                  return
-//              }
-//
-//              if let httpResponse = response as? HTTPURLResponse {
-//                  print("Status code: \(httpResponse.statusCode)")
-//              }
-//
-//              if let data = data {
-//                  do {
-//                      let decoder = JSONDecoder()
-//                      let loginResponse = try decoder.decode(AuthenticationResponse.self, from: data)
-//                      print(loginResponse)
-//                      if loginResponse.message != nil {
-//                          DispatchQueue.main.async {
-//                              self.authenticationError = loginResponse.message ?? ""
-//                              self.isLoading = false
-//                              if self.authenticationError.isEmpty {
-//                                  self.validRegistration = true
-//                              }
-//                          }
-//                      }
-//                  } catch {
-//                      print(error.localizedDescription)
-//                  }
-//              }
-//          }.resume()
         
-        self.validRegistration = true
+        guard let url = URL(string: "http://3.73.164.18/api/v1/loginService/login") else { return }
+        isLoading = true
+
+          var request = URLRequest(url: url)
+          request.httpMethod = "POST"
+          request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+          let encoder = JSONEncoder()
+          do {
+              let jsonData = try encoder.encode(userData)
+              request.httpBody = jsonData
+          } catch {
+              print(error.localizedDescription)
+              DispatchQueue.main.async {
+                  self.authenticationError = error.localizedDescription
+              }
+              return
+          }
+
+          URLSession.shared.dataTask(with: request) { data, response, error in
+              guard error == nil else {
+                  print(error!.localizedDescription)
+                  DispatchQueue.main.async {
+                      self.authenticationError = error!.localizedDescription
+                  }
+                  return
+              }
+
+              if let httpResponse = response as? HTTPURLResponse {
+                  print("Status code: \(httpResponse.statusCode)")
+              }
+
+              if let data = data {
+                  do {
+                      let decoder = JSONDecoder()
+                      let loginResponse = try decoder.decode(AuthenticationResponse.self, from: data)
+                      print(loginResponse)
+                      if loginResponse.message != nil {
+                          DispatchQueue.main.async {
+                              self.authenticationError = loginResponse.message ?? ""
+                              self.isLoading = false
+                              if self.authenticationError.isEmpty {
+                                  self.validRegistration = true
+                              }
+                          }
+                      } else {
+                          DispatchQueue.main.async {
+                              self.validRegistration = true
+                              self.isLoading = false
+                          }
+                      }
+                  } catch {
+                      print(error.localizedDescription)
+                  }
+              }
+          }.resume()
     }
 
 
